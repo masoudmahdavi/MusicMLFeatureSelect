@@ -18,17 +18,19 @@ class MLPipeline:
     def run(self):
         """Execute the full ML pipeline."""
         self.logger.info("Starting the ML pipeline...")
-        try:
-            self.logger.info("Preprocessing data...")
-            preprocessed_data = self.preprocess_data()
+        with mlflow.start_run():
             
-            self.logger.info("Data preprocessing completed.")
-            self.logger.info("Logging preprocessed data to MLFlow...")
-            # self.log_to_mlflow(preprocessed_data)
-            self.logger.info("Data logged to MLFlow.")
+            try:
+                self.logger.info("Preprocessing data...")
+                preprocessed_data = self.preprocess_data()
+                mlflow.log_artifact(self.model.data_path)
+                self.logger.info("Data preprocessing completed.")
+                self.logger.info("Logging preprocessed data to MLFlow...")
+                # self.log_to_mlflow(preprocessed_data)
+                self.logger.info("Data logged to MLFlow.")
 
-        except Exception as e:
-            self.logger.error(f"An error occurred: {e}")
+            except Exception as e:
+                self.logger.error(f"An error occurred: {e}")
         self.logger.info("ML pipeline completed.")
 
     def preprocess_data(self) -> pd.DataFrame:
