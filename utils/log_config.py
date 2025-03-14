@@ -12,7 +12,7 @@ def setup_logging(model:Model, level=logging.INFO):
     # Configure logging
     logging.basicConfig(
         level=level,
-        format = "%(asctime)s.%(msecs)03d - %(levelname)s - %(name)s - %(message)s",
+        format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s",
         handlers=[
             RotatingFileHandler(log_path, maxBytes=5_000_000, backupCount=3),  # 5MB log rotation
             logging.StreamHandler(sys.stdout)  # Log to console

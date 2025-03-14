@@ -6,7 +6,8 @@ class Preprocess:
         self.model = model
 
     def preprocess_raw_data(self):
-        raw_data = self.read_csv()
+        raw_data = self.load_csv()
+        return raw_data
 
     def handle_miss_data(self):
         pass
@@ -17,6 +18,16 @@ class Preprocess:
     def split_data(self):
         pass
 
-    def read_csv(self):
+    def load_csv(self) -> pd.DataFrame:
+        """Read data from csv file.
+
+        Raises:
+            ValueError: If data is empty
+
+        Returns:
+            pd.DataFrame: Dataframe containing data
+        """
         data = pd.read_csv(self.model.data_path)
- 
+        if data.empty:
+            raise ValueError("Data is empty")
+        return data
