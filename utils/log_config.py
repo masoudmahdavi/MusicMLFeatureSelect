@@ -1,11 +1,16 @@
 import logging
 import os
 import sys
+import argparse
 from model.model import Model
 from logging.handlers import RotatingFileHandler
 
-def setup_logging(model:Model, level=logging.INFO):
+def setup_logging(model:Model, args:argparse.Namespace) -> logging.Logger:
     """Set up logging configuration."""
+    if args.rewrite:
+            os.remove(model.log_file_dir + model.log_file_name)
+
+    level = 'DEBUG' if args.verbos == True else 'INFO' 
     os.makedirs(model.log_file_dir, exist_ok=True)
     log_path = os.path.join(model.log_file_dir, model.log_file_name)
 

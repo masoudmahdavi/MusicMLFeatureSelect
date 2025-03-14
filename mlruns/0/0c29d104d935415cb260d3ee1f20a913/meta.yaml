@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/0c29d104d935415cb260d3ee1f20a913/artifacts
+end_time: 1741970317758
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0c29d104d935415cb260d3ee1f20a913
+run_name: handsome-shrimp-591
+run_uuid: 0c29d104d935415cb260d3ee1f20a913
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741970317741
+status: 3
+tags: []
+user_id: masoud

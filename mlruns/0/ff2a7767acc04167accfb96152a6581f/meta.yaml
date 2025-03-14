@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/ff2a7767acc04167accfb96152a6581f/artifacts
+end_time: 1741970385095
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ff2a7767acc04167accfb96152a6581f
+run_name: delightful-lamb-291
+run_uuid: ff2a7767acc04167accfb96152a6581f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741970385082
+status: 3
+tags: []
+user_id: masoud
