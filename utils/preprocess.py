@@ -19,5 +19,4 @@ class Preprocess:
 
     def read_csv(self):
         data = pd.read_csv(self.model.data_path)
-        print(data.info())
-        exit()
+ 
