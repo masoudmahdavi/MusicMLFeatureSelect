@@ -23,7 +23,6 @@ class MLPipeline:
             try:
                 self.logger.info("Preprocessing data...")
                 preprocessed_data = self.preprocess.preprocess_raw_data()
-                
                 mlflow.log_artifact(self.model.data_path)
                 self.logger.info("Data preprocessing completed.")
                 self.logger.info("Logging preprocessed data to MLFlow...")
@@ -33,7 +32,6 @@ class MLPipeline:
             except Exception as e:
                 self.logger.error(f"An error occurred: {e}")
         self.logger.info("ML pipeline completed.")
-
 
 
 if __name__ == "__main__":

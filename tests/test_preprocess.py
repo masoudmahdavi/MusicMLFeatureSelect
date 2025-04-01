@@ -13,7 +13,7 @@ class PreprocessTest(unittest.TestCase):
         self.model = Model()
         self.model.data_path = 'data/Turkish_Music_Mood_Recognition.csv'
         self.preprocess = Preprocess(self.model)
-
+    
     def test_load_csv(self):
         data = self.preprocess.load_csv()
         self.assertIsNotNone(data)

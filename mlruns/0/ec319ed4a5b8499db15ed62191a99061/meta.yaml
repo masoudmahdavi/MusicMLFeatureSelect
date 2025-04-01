@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/ec319ed4a5b8499db15ed62191a99061/artifacts
+end_time: 1742432213092
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ec319ed4a5b8499db15ed62191a99061
+run_name: placid-lark-202
+run_uuid: ec319ed4a5b8499db15ed62191a99061
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742432213053
+status: 3
+tags: []
+user_id: masoud

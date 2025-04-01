@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/13a4f0f30b104dfe8830efc2a45deac2/artifacts
+end_time: 1742432033734
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 13a4f0f30b104dfe8830efc2a45deac2
+run_name: big-croc-72
+run_uuid: 13a4f0f30b104dfe8830efc2a45deac2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742432033720
+status: 3
+tags: []
+user_id: masoud
