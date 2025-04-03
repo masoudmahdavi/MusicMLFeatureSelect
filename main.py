@@ -5,7 +5,6 @@ import mlflow
 import logging
 from utils.log_config import setup_logging
 import argparse
-import os
 
 class MLPipeline:
     def __init__(self, model:Model, args:argparse.Namespace):
@@ -14,7 +13,7 @@ class MLPipeline:
         setup_logging(self.model, args) # Configure logging once
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.info(f"Data path: {self.model.data_path}")
-        self.preprocess = Preprocess(self.model)
+        self.preprocess = Preprocess(self.model, self.logger)
     
     def run(self):
         """Execute the full ML pipeline."""
@@ -32,7 +31,7 @@ class MLPipeline:
             except Exception as e:
                 self.logger.error(f"An error occurred: {e}")
         self.logger.info("ML pipeline completed.")
-
+        print('foo')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='ML Pipeline')

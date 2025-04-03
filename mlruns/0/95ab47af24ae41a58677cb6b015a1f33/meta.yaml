@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/95ab47af24ae41a58677cb6b015a1f33/artifacts
+end_time: 1743661531960
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 95ab47af24ae41a58677cb6b015a1f33
+run_name: amusing-smelt-123
+run_uuid: 95ab47af24ae41a58677cb6b015a1f33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743661531948
+status: 3
+tags: []
+user_id: masoud

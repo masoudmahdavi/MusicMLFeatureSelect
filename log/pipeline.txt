@@ -86,3 +86,251 @@
 2025-03-20 04:26:53,092 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
 2025-03-20 04:26:53,092 - INFO - MLPipeline - Data logged to MLFlow.
 2025-03-20 04:26:53,094 - INFO - MLPipeline - ML pipeline completed.
+2025-04-03 09:54:48,734 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 09:54:48,735 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-03 09:54:48,810 - INFO - MLPipeline - Preprocessing data...
+2025-04-03 09:54:48,821 - INFO - MLPipeline - Data preprocessing completed.
+2025-04-03 09:54:48,821 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
+2025-04-03 09:54:48,821 - INFO - MLPipeline - Data logged to MLFlow.
+2025-04-03 09:54:48,822 - INFO - MLPipeline - ML pipeline completed.
+2025-04-03 09:55:31,906 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 09:55:31,906 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-03 09:55:31,954 - INFO - MLPipeline - Preprocessing data...
+2025-04-03 09:55:31,959 - INFO - MLPipeline - Data preprocessing completed.
+2025-04-03 09:55:31,959 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
+2025-04-03 09:55:31,959 - INFO - MLPipeline - Data logged to MLFlow.
+2025-04-03 09:55:31,961 - INFO - MLPipeline - ML pipeline completed.
+2025-04-03 09:57:04,337 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 09:57:04,338 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-03 09:57:04,387 - INFO - MLPipeline - Preprocessing data...
+2025-04-03 09:57:04,392 - INFO - MLPipeline - Data preprocessing completed.
+2025-04-03 09:57:04,392 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
+2025-04-03 09:57:04,392 - INFO - MLPipeline - Data logged to MLFlow.
+2025-04-03 09:57:04,394 - INFO - MLPipeline - ML pipeline completed.
+2025-04-03 10:30:54,896 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:36:53,838 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:37:03,094 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:42:33,708 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:42:33,708 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:42:33,713 - INFO - MLPipeline - Class                                         0
+_Fluctuation_Mean                             0
+_MFCC_Mean_2                                  0
+_MFCC_Mean_4                                  0
+_MFCC_Mean_7                                  0
+_Roughness_Mean                               0
+_Roughness_Slope                              0
+_Zero-crossingrate_Mean                       0
+_AttackTime_Mean                              0
+_Eventdensity_Mean                            0
+_Pulseclarity_Mean                            0
+_Chromagram_Mean_7                            0
+_HarmonicChangeDetectionFunction_Mean         0
+_HarmonicChangeDetectionFunction_PeriodAmp    0
+dtype: int64
+2025-04-03 10:43:22,585 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:43:22,585 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:43:40,238 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:43:40,239 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:43:51,779 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:43:51,779 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:44:17,510 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:44:17,511 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:44:17,514 - INFO - MLPipeline - Class                                         0
+_Fluctuation_Mean                             0
+_MFCC_Mean_2                                  0
+_MFCC_Mean_4                                  0
+_MFCC_Mean_7                                  0
+_Roughness_Mean                               0
+_Roughness_Slope                              0
+_Zero-crossingrate_Mean                       0
+_AttackTime_Mean                              0
+_Eventdensity_Mean                            0
+_Pulseclarity_Mean                            0
+_Chromagram_Mean_7                            0
+_HarmonicChangeDetectionFunction_Mean         0
+_HarmonicChangeDetectionFunction_PeriodAmp    0
+dtype: int64
+2025-04-03 10:44:55,810 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:44:55,810 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:44:55,814 - INFO - MLPipeline - Class                                         0
+_Fluctuation_Mean                             0
+_MFCC_Mean_2                                  0
+_MFCC_Mean_4                                  0
+_MFCC_Mean_7                                  0
+_Roughness_Mean                               0
+_Roughness_Slope                              0
+_Zero-crossingrate_Mean                       0
+_AttackTime_Mean                              0
+_Eventdensity_Mean                            0
+_Pulseclarity_Mean                            0
+_Chromagram_Mean_7                            0
+_HarmonicChangeDetectionFunction_Mean         0
+_HarmonicChangeDetectionFunction_PeriodAmp    0
+dtype: int64
+2025-04-03 10:48:43,941 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:48:43,941 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:54:10,539 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:54:10,539 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:54:28,174 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:54:28,174 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:54:45,163 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:54:45,163 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:55:32,172 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:55:32,172 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:55:40,358 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:55:40,358 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:58:06,562 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:58:06,562 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 10:58:16,614 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 10:58:16,614 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:03:30,209 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:03:30,210 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:03:50,561 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:03:50,562 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:05:54,370 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:05:54,370 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:06:28,114 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:06:28,114 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:06:51,196 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:06:51,196 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:24:20,360 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:24:20,360 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:24:40,387 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:24:40,387 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:27:24,132 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:27:24,132 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:27:55,689 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:27:55,689 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:28:13,774 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:28:13,774 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:28:20,101 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:28:20,101 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:28:31,612 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:28:31,612 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:28:50,392 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:28:50,393 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:28:50,398 - INFO - MLPipeline - +----+--------------------------------------------+-----------+
+|    |                Column Name                 | Null Rows |
++----+--------------------------------------------+-----------+
+| 0  |                   Class                    |     0     |
+| 1  |             _Fluctuation_Mean              |     0     |
+| 2  |                _MFCC_Mean_2                |     0     |
+| 3  |                _MFCC_Mean_4                |     0     |
+| 4  |                _MFCC_Mean_7                |     0     |
+| 5  |              _Roughness_Mean               |     0     |
+| 6  |              _Roughness_Slope              |     0     |
+| 7  |          _Zero-crossingrate_Mean           |     0     |
+| 8  |              _AttackTime_Mean              |     0     |
+| 9  |             _Eventdensity_Mean             |     0     |
+| 10 |             _Pulseclarity_Mean             |     0     |
+| 11 |             _Chromagram_Mean_7             |     0     |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     |
++----+--------------------------------------------+-----------+
+2025-04-03 11:29:09,045 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:29:09,045 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:29:09,051 - INFO - MLPipeline - +----+--------------------------------------------+-----------+
+|    |                Column Name                 | Null Rows |
++----+--------------------------------------------+-----------+
+| 0  |                   Class                    |     0     |
+| 1  |             _Fluctuation_Mean              |     0     |
+| 2  |                _MFCC_Mean_2                |     0     |
+| 3  |                _MFCC_Mean_4                |     0     |
+| 4  |                _MFCC_Mean_7                |     0     |
+| 5  |              _Roughness_Mean               |     0     |
+| 6  |              _Roughness_Slope              |     0     |
+| 7  |          _Zero-crossingrate_Mean           |     0     |
+| 8  |              _AttackTime_Mean              |     0     |
+| 9  |             _Eventdensity_Mean             |     0     |
+| 10 |             _Pulseclarity_Mean             |     0     |
+| 11 |             _Chromagram_Mean_7             |     0     |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     |
++----+--------------------------------------------+-----------+
+2025-04-03 11:29:48,551 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:29:48,551 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:29:48,558 - INFO - MLPipeline - s+----+--------------------------------------------+-----------+
+|    |                Column Name                 | Null Rows |
++----+--------------------------------------------+-----------+
+| 0  |                   Class                    |     0     |
+| 1  |             _Fluctuation_Mean              |     0     |
+| 2  |                _MFCC_Mean_2                |     0     |
+| 3  |                _MFCC_Mean_4                |     0     |
+| 4  |                _MFCC_Mean_7                |     0     |
+| 5  |              _Roughness_Mean               |     0     |
+| 6  |              _Roughness_Slope              |     0     |
+| 7  |          _Zero-crossingrate_Mean           |     0     |
+| 8  |              _AttackTime_Mean              |     0     |
+| 9  |             _Eventdensity_Mean             |     0     |
+| 10 |             _Pulseclarity_Mean             |     0     |
+| 11 |             _Chromagram_Mean_7             |     0     |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     |
++----+--------------------------------------------+-----------+
+2025-04-03 11:29:58,719 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:29:58,719 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:29:58,725 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+
+|    |                Column Name                 | Null Rows |
++----+--------------------------------------------+-----------+
+| 0  |                   Class                    |     0     |
+| 1  |             _Fluctuation_Mean              |     0     |
+| 2  |                _MFCC_Mean_2                |     0     |
+| 3  |                _MFCC_Mean_4                |     0     |
+| 4  |                _MFCC_Mean_7                |     0     |
+| 5  |              _Roughness_Mean               |     0     |
+| 6  |              _Roughness_Slope              |     0     |
+| 7  |          _Zero-crossingrate_Mean           |     0     |
+| 8  |              _AttackTime_Mean              |     0     |
+| 9  |             _Eventdensity_Mean             |     0     |
+| 10 |             _Pulseclarity_Mean             |     0     |
+| 11 |             _Chromagram_Mean_7             |     0     |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     |
++----+--------------------------------------------+-----------+
+2025-04-03 11:34:27,624 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:34:27,624 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:35:21,590 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:35:21,590 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:36:50,806 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:36:50,806 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:36:50,812 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+------+
+|    |                Column Name                 | Null Rows | type |
++----+--------------------------------------------+-----------+------+
+| 0  |                   Class                    |     0     | dsf  |
+| 1  |             _Fluctuation_Mean              |     0     | dsf  |
+| 2  |                _MFCC_Mean_2                |     0     | dsf  |
+| 3  |                _MFCC_Mean_4                |     0     | dsf  |
+| 4  |                _MFCC_Mean_7                |     0     | dsf  |
+| 5  |              _Roughness_Mean               |     0     | dsf  |
+| 6  |              _Roughness_Slope              |     0     | dsf  |
+| 7  |          _Zero-crossingrate_Mean           |     0     | dsf  |
+| 8  |              _AttackTime_Mean              |     0     | dsf  |
+| 9  |             _Eventdensity_Mean             |     0     | dsf  |
+| 10 |             _Pulseclarity_Mean             |     0     | dsf  |
+| 11 |             _Chromagram_Mean_7             |     0     | dsf  |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | dsf  |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | dsf  |
++----+--------------------------------------------+-----------+------+
+2025-04-03 11:37:34,420 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-03 11:37:34,420 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-03 11:37:34,428 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
