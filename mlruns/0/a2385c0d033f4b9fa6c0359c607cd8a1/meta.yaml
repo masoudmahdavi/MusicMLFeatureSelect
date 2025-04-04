@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/a2385c0d033f4b9fa6c0359c607cd8a1/artifacts
+end_time: 1743763893836
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a2385c0d033f4b9fa6c0359c607cd8a1
+run_name: shivering-kit-814
+run_uuid: a2385c0d033f4b9fa6c0359c607cd8a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763893808
+status: 4
+tags: []
+user_id: masoud

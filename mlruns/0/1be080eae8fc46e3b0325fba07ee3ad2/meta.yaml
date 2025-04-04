@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/1be080eae8fc46e3b0325fba07ee3ad2/artifacts
+end_time: 1743691704742
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1be080eae8fc46e3b0325fba07ee3ad2
+run_name: upset-rook-336
+run_uuid: 1be080eae8fc46e3b0325fba07ee3ad2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743691704730
+status: 4
+tags: []
+user_id: masoud

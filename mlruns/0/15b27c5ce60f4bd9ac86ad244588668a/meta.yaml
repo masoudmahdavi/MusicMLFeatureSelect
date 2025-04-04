@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/15b27c5ce60f4bd9ac86ad244588668a/artifacts
+end_time: 1743687748983
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 15b27c5ce60f4bd9ac86ad244588668a
+run_name: puzzled-croc-258
+run_uuid: 15b27c5ce60f4bd9ac86ad244588668a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743687748972
+status: 3
+tags: []
+user_id: masoud

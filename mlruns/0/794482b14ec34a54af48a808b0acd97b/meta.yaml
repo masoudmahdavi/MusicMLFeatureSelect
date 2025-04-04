@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/794482b14ec34a54af48a808b0acd97b/artifacts
+end_time: 1743691377680
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 794482b14ec34a54af48a808b0acd97b
+run_name: sedate-stork-994
+run_uuid: 794482b14ec34a54af48a808b0acd97b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743691377650
+status: 4
+tags: []
+user_id: masoud

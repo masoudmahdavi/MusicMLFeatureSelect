@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/04d898e49d1a4a8d9f9e83bd93f07159/artifacts
+end_time: 1743763328663
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 04d898e49d1a4a8d9f9e83bd93f07159
+run_name: big-stag-550
+run_uuid: 04d898e49d1a4a8d9f9e83bd93f07159
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763328647
+status: 3
+tags: []
+user_id: masoud

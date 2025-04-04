@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/90ccd0841e844c16bcd038f278852b5e/artifacts
+end_time: 1743763613710
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 90ccd0841e844c16bcd038f278852b5e
+run_name: calm-cod-320
+run_uuid: 90ccd0841e844c16bcd038f278852b5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763613689
+status: 4
+tags: []
+user_id: masoud

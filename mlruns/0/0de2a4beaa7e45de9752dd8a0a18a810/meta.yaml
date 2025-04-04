@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/0de2a4beaa7e45de9752dd8a0a18a810/artifacts
+end_time: 1743763585047
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0de2a4beaa7e45de9752dd8a0a18a810
+run_name: learned-shrew-456
+run_uuid: 0de2a4beaa7e45de9752dd8a0a18a810
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763585028
+status: 4
+tags: []
+user_id: masoud

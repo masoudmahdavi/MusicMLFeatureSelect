@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/ed5a043284654731b5f80622265f245e/artifacts
+end_time: 1743690434442
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ed5a043284654731b5f80622265f245e
+run_name: handsome-midge-936
+run_uuid: ed5a043284654731b5f80622265f245e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743690434432
+status: 4
+tags: []
+user_id: masoud

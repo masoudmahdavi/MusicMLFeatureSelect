@@ -18,24 +18,29 @@ class MLPipeline:
     def run(self):
         """Execute the full ML pipeline."""
         self.logger.info("Starting the ML pipeline...")
-        with mlflow.start_run():
-            try:
-                self.logger.info("Preprocessing data...")
-                preprocessed_data = self.preprocess.preprocess_raw_data()
-                mlflow.log_artifact(self.model.data_path)
-                self.logger.info("Data preprocessing completed.")
-                self.logger.info("Logging preprocessed data to MLFlow...")
-                # self.log_to_mlflow(preprocessed_data)
-                self.logger.info("Data logged to MLFlow.")
+        # with mlflow.start_run():
+        try:
+            self.logger.info("Preprocessing data...")
+            preprocessed_data = self.preprocess.preprocess_raw_data()
+            # mlflow.log_artifact(self.model.data_path)
+            self.logger.info("Data preprocessing completed.")
+            self.logger.info("Logging preprocessed data to MLFlow...")
+            # self.log_to_mlflow(preprocessed_data)
+            self.logger.info("Data logged to MLFlow.")
 
-            except Exception as e:
+        except Exception as e:
+            if args.verbos:
+                self.logger.error(f"An error occurred: {e}", exc_info=True)
+                raise e
+            else:
                 self.logger.error(f"An error occurred: {e}")
-        self.logger.info("ML pipeline completed.")
-        print('foo')
+        finally:
+            self.logger.info("ML pipeline completed.")
+            pass
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='ML Pipeline')
-    parser.add_argument('--verbos', type=bool, help='Verbos', default=False)
+    parser.add_argument('--verbos', '-v',action='store_true', help='Enable verbose logging')
     parser.add_argument('--rewrite', type=bool, help='Rewrite log file', default=False)
     args = parser.parse_args()
 

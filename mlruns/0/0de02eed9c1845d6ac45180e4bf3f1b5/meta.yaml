@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/0de02eed9c1845d6ac45180e4bf3f1b5/artifacts
+end_time: 1743763862089
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0de02eed9c1845d6ac45180e4bf3f1b5
+run_name: bustling-fawn-503
+run_uuid: 0de02eed9c1845d6ac45180e4bf3f1b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763862058
+status: 4
+tags: []
+user_id: masoud

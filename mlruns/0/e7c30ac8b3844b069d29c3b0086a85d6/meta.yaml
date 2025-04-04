@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/e7c30ac8b3844b069d29c3b0086a85d6/artifacts
+end_time: 1743751381808
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e7c30ac8b3844b069d29c3b0086a85d6
+run_name: rumbling-lynx-441
+run_uuid: e7c30ac8b3844b069d29c3b0086a85d6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743751381785
+status: 3
+tags: []
+user_id: masoud

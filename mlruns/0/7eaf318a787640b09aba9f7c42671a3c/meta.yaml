@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/7eaf318a787640b09aba9f7c42671a3c/artifacts
+end_time: 1743763339569
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7eaf318a787640b09aba9f7c42671a3c
+run_name: kindly-carp-319
+run_uuid: 7eaf318a787640b09aba9f7c42671a3c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763339544
+status: 3
+tags: []
+user_id: masoud

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/4df485d192b2436ba31c737f0af9a6bb/artifacts
+end_time: 1743690448000
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4df485d192b2436ba31c737f0af9a6bb
+run_name: rambunctious-pug-595
+run_uuid: 4df485d192b2436ba31c737f0af9a6bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743690447991
+status: 4
+tags: []
+user_id: masoud

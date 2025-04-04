@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/13c4792875cb4feaa5a74b76fa5c4051/artifacts
+end_time: 1743689895862
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 13c4792875cb4feaa5a74b76fa5c4051
+run_name: invincible-mare-513
+run_uuid: 13c4792875cb4feaa5a74b76fa5c4051
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743689895852
+status: 4
+tags: []
+user_id: masoud

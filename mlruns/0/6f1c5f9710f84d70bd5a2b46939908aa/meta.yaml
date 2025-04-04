@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/6f1c5f9710f84d70bd5a2b46939908aa/artifacts
+end_time: 1743691179973
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6f1c5f9710f84d70bd5a2b46939908aa
+run_name: polite-grub-155
+run_uuid: 6f1c5f9710f84d70bd5a2b46939908aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743691179964
+status: 3
+tags: []
+user_id: masoud

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/9e02a29c924e416b8bb986136db1502f/artifacts
+end_time: 1743763376924
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9e02a29c924e416b8bb986136db1502f
+run_name: righteous-fowl-524
+run_uuid: 9e02a29c924e416b8bb986136db1502f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763376907
+status: 4
+tags: []
+user_id: masoud

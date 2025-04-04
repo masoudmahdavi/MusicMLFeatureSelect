@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/ca438f7b624d42238aad49f87644cfb4/artifacts
+end_time: 1743691197020
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca438f7b624d42238aad49f87644cfb4
+run_name: legendary-wren-715
+run_uuid: ca438f7b624d42238aad49f87644cfb4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743691197011
+status: 4
+tags: []
+user_id: masoud

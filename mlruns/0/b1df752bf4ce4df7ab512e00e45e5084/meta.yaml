@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/b1df752bf4ce4df7ab512e00e45e5084/artifacts
+end_time: 1743762805521
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b1df752bf4ce4df7ab512e00e45e5084
+run_name: fortunate-hen-636
+run_uuid: b1df752bf4ce4df7ab512e00e45e5084
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743762805506
+status: 3
+tags: []
+user_id: masoud

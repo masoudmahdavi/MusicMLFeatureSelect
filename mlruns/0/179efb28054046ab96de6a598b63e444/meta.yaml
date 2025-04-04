@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/179efb28054046ab96de6a598b63e444/artifacts
+end_time: 1743763832027
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 179efb28054046ab96de6a598b63e444
+run_name: lyrical-lynx-836
+run_uuid: 179efb28054046ab96de6a598b63e444
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763832004
+status: 4
+tags: []
+user_id: masoud

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/93b78ff770234b57a27ce9a49f3dfab8/artifacts
+end_time: 1743690405558
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93b78ff770234b57a27ce9a49f3dfab8
+run_name: calm-shad-887
+run_uuid: 93b78ff770234b57a27ce9a49f3dfab8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743690405548
+status: 4
+tags: []
+user_id: masoud

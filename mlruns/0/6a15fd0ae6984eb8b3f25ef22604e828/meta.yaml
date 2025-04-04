@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/6a15fd0ae6984eb8b3f25ef22604e828/artifacts
+end_time: 1743763295012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6a15fd0ae6984eb8b3f25ef22604e828
+run_name: stately-lark-271
+run_uuid: 6a15fd0ae6984eb8b3f25ef22604e828
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763295001
+status: 4
+tags: []
+user_id: masoud

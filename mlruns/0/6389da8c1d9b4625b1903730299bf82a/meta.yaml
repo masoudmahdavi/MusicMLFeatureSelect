@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/6389da8c1d9b4625b1903730299bf82a/artifacts
+end_time: 1743691428703
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6389da8c1d9b4625b1903730299bf82a
+run_name: orderly-auk-817
+run_uuid: 6389da8c1d9b4625b1903730299bf82a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743691428694
+status: 4
+tags: []
+user_id: masoud

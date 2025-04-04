@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/52248f64e8904671ad6c3dea90f9fe68/artifacts
+end_time: 1743690364714
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 52248f64e8904671ad6c3dea90f9fe68
+run_name: lyrical-croc-317
+run_uuid: 52248f64e8904671ad6c3dea90f9fe68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743690364705
+status: 4
+tags: []
+user_id: masoud

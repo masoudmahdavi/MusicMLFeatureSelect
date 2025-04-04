@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/a7f8777f7a36493b88555a85d6e46264/artifacts
+end_time: 1743763231251
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a7f8777f7a36493b88555a85d6e46264
+run_name: abrasive-fly-90
+run_uuid: a7f8777f7a36493b88555a85d6e46264
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743763231239
+status: 4
+tags: []
+user_id: masoud

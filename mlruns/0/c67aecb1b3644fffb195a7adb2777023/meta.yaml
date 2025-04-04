@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/c67aecb1b3644fffb195a7adb2777023/artifacts
+end_time: 1743690429245
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c67aecb1b3644fffb195a7adb2777023
+run_name: grandiose-doe-950
+run_uuid: c67aecb1b3644fffb195a7adb2777023
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743690429236
+status: 4
+tags: []
+user_id: masoud

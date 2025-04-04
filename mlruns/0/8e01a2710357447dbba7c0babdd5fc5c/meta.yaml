@@ -1,0 +1,15 @@
+artifact_uri: file:///home/masoud/python/select_best_feature/MusicMLFeatureSelect/mlruns/0/8e01a2710357447dbba7c0babdd5fc5c/artifacts
+end_time: 1743762851705
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8e01a2710357447dbba7c0babdd5fc5c
+run_name: youthful-hare-57
+run_uuid: 8e01a2710357447dbba7c0babdd5fc5c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743762851695
+status: 3
+tags: []
+user_id: masoud
