@@ -24,9 +24,9 @@ class MLPipeline:
             preprocessed_data = self.preprocess.preprocess_raw_data()
             # mlflow.log_artifact(self.model.data_path)
             self.logger.info("Data preprocessing completed.")
-            self.logger.info("Logging preprocessed data to MLFlow...")
+            # self.logger.info("Logging preprocessed data to MLFlow...")
             # self.log_to_mlflow(preprocessed_data)
-            self.logger.info("Data logged to MLFlow.")
+            # self.logger.info("Data logged to MLFlow.")
 
         except Exception as e:
             if args.verbos:

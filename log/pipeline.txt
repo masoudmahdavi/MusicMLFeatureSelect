@@ -2546,3 +2546,44 @@ TypeError: cannot concatenate object of type '<class 'tuple'>'; only Series and 
 | y_test  |   (80,)   |
 +---------+-----------+
 2025-04-04 14:23:45,329 - INFO - MLPipeline - ML pipeline completed.
+2025-04-04 17:31:42,216 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-04 17:31:42,220 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-04 17:31:42,229 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-04 17:31:42,229 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-04 17:31:42,229 - INFO - MLPipeline - Preprocessing data...
+2025-04-04 17:31:42,230 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-04 17:31:42,230 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-04 17:31:42,232 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-04 17:31:42,235 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (320, 13) |
+| X_test  | (80, 13)  |
+| y_train |  (320,)   |
+| y_test  |   (80,)   |
++---------+-----------+
+2025-04-04 17:31:42,236 - INFO - MLPipeline - Data split completed.
+2025-04-04 17:31:42,236 - INFO - MLPipeline - Data preprocessing completed.
+2025-04-04 17:31:42,236 - INFO - MLPipeline - Data preprocessing completed.
+2025-04-04 17:31:42,236 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
+2025-04-04 17:31:42,236 - INFO - MLPipeline - Data logged to MLFlow.
+2025-04-04 17:31:42,237 - INFO - MLPipeline - ML pipeline completed.

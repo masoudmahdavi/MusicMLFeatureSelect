@@ -3,6 +3,7 @@ from model.model import Model
 import logging
 from tabulate import tabulate
 from sklearn.model_selection import train_test_split
+from ml_models.feature_selection import FindBestFeatures
 
 class Preprocess:
     def __init__(self, model:Model, logger:logging.Logger):
@@ -26,6 +27,8 @@ class Preprocess:
         self.logger.info("Starting data preprocessing...")
         features, target = self.split_featres_target()
         preprocessed_data = self.split_train_test(features, target)
+        best_feature_selection_obj = FindBestFeatures(preprocessed_data)
+        best_feature_selection_obj
         self.logger.info("Data preprocessing completed.")
         return preprocessed_data
 
@@ -57,21 +60,12 @@ class Preprocess:
             del df, new_df
 
         X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
+        self.logger.info("Data split into train and test sets.")
         dict_data = {'X_train':X_train,
                      'X_test':X_test,
                      'y_train':y_train, 
                      'y_test':y_test}
         log_tabulate_data_shapes(dict_data)
-        exit()
-        self.logger.info("Data split into train and test sets.")
-        self.logger.info(f"X_train shape: {X_train.shape}")
-        self.logger.info(f"X_test shape: {X_test.shape}")
-        self.logger.info(f"y_train shape: {y_train.shape}")
-        self.logger.info(f"y_test shape: {y_test.shape}")
-        self.logger.info('\n'+tabulate(X_train.head(), headers="keys", tablefmt="pretty"))
-        self.logger.info('\n'+tabulate(X_test.head(), headers="keys", tablefmt="pretty"))
-        self.logger.info('\n'+tabulate(y_train.head(), headers="keys", tablefmt="pretty"))  
-        self.logger.info('\n'+tabulate(y_test.head(), headers="keys", tablefmt="pretty"))
         self.logger.info("Data split completed.")
         return dict_data
 
