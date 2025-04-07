@@ -3,7 +3,7 @@ from model.model import Model
 import logging
 from tabulate import tabulate
 from sklearn.model_selection import train_test_split
-from ml_models.feature_selection import FindBestFeatures
+from ml_models.feature_selection import BestFeatures
 
 class Preprocess:
     def __init__(self, model:Model, logger:logging.Logger):
@@ -27,8 +27,8 @@ class Preprocess:
         self.logger.info("Starting data preprocessing...")
         features, target = self.split_featres_target()
         preprocessed_data = self.split_train_test(features, target)
-        best_feature_selection_obj = FindBestFeatures(preprocessed_data)
-        best_feature_selection_obj
+        best_feature_selection_obj = BestFeatures(preprocessed_data)
+        best_feature_selection_obj.find_best_features()
         self.logger.info("Data preprocessing completed.")
         return preprocessed_data
 

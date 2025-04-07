@@ -1,9 +1,11 @@
 
-class FindBestFeatures:
+class BestFeatures:
     def __init__(self, data:dict):
         self.model = self.select_method()
         self.data = data
 
+    def find_best_features(self):
+        pass
     def fit(self):
         self.model.fit(self.X, self.y)
         return self.model.feature_importances_
