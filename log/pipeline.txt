@@ -2587,3 +2587,151 @@ TypeError: cannot concatenate object of type '<class 'tuple'>'; only Series and 
 2025-04-04 17:31:42,236 - INFO - MLPipeline - Logging preprocessed data to MLFlow...
 2025-04-04 17:31:42,236 - INFO - MLPipeline - Data logged to MLFlow.
 2025-04-04 17:31:42,237 - INFO - MLPipeline - ML pipeline completed.
+2025-04-08 20:58:19,520 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-08 20:58:19,522 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-08 20:58:19,535 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-08 20:58:19,536 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-08 20:58:19,536 - INFO - MLPipeline - Preprocessing data...
+2025-04-08 20:58:19,536 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-08 20:58:19,541 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-08 20:58:19,545 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-08 20:58:19,548 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (320, 13) |
+| X_test  | (80, 13)  |
+| y_train |  (320,)   |
+| y_test  |   (80,)   |
++---------+-----------+
+2025-04-08 20:58:19,548 - INFO - MLPipeline - Data split completed.
+2025-04-08 20:58:23,902 - ERROR - MLPipeline - An error occurred: 'BestFeatures' object has no attribute 'model'
+2025-04-08 20:58:23,902 - INFO - MLPipeline - ML pipeline completed.
+2025-04-08 20:58:32,771 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-08 20:58:32,771 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-08 20:58:32,779 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-08 20:58:32,779 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-08 20:58:32,779 - INFO - MLPipeline - Preprocessing data...
+2025-04-08 20:58:32,779 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-08 20:58:32,780 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-08 20:58:32,781 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-08 20:58:32,785 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (320, 13) |
+| X_test  | (80, 13)  |
+| y_train |  (320,)   |
+| y_test  |   (80,)   |
++---------+-----------+
+2025-04-08 20:58:32,785 - INFO - MLPipeline - Data split completed.
+2025-04-08 20:58:36,128 - ERROR - MLPipeline - An error occurred: 'BestFeatures' object has no attribute 'model'
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 30, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 4, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 23, in select_method
+    return self.each_feature_one_model()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 11, in each_feature_one_model
+    return self.model.feature_importances_
+           ^^^^^^^^^^
+AttributeError: 'BestFeatures' object has no attribute 'model'
+2025-04-08 20:58:36,130 - INFO - MLPipeline - ML pipeline completed.
+2025-04-08 20:58:58,358 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-08 20:58:58,358 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-08 20:58:58,367 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-08 20:58:58,367 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-08 20:58:58,368 - INFO - MLPipeline - Preprocessing data...
+2025-04-08 20:58:58,368 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-08 20:58:58,368 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-08 20:58:58,370 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-08 20:58:58,372 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (320, 13) |
+| X_test  | (80, 13)  |
+| y_train |  (320,)   |
+| y_test  |   (80,)   |
++---------+-----------+
+2025-04-08 20:58:58,372 - INFO - MLPipeline - Data split completed.
+2025-04-08 20:59:00,241 - ERROR - MLPipeline - An error occurred: 'BestFeatures' object has no attribute 'X'
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 30, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 4, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 25, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 16, in sklearn_feature_selection
+    selector.fit(self.X, self.y)
+                 ^^^^^^
+AttributeError: 'BestFeatures' object has no attribute 'X'
+2025-04-08 20:59:00,242 - INFO - MLPipeline - ML pipeline completed.

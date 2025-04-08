@@ -25,10 +25,20 @@ class Preprocess:
         This includes loading the data, handling missing values, normalizing data, and splitting into train/test sets.
         """
         self.logger.info("Starting data preprocessing...")
+        self.logger.info("Splitting data into features and target variable.")
         features, target = self.split_featres_target()
+
+        self.logger.info("Splitting data into train and test sets.")
         preprocessed_data = self.split_train_test(features, target)
+
+        self.logger.info("Handling missing values.")
+        preprocessed_data = self.fill_miss_data(preprocessed_data)
+
+        self.logger.info("Normalizing data.")
+        preprocessed_data = self.normalize_data(preprocessed_data)
+
         best_feature_selection_obj = BestFeatures(preprocessed_data)
-        best_feature_selection_obj.find_best_features()
+        exit()
         self.logger.info("Data preprocessing completed.")
         return preprocessed_data
 
@@ -43,10 +53,10 @@ class Preprocess:
         self.logger.info("Data split into features and target variable.")
         return features, target
     
-    def handle_miss_data(self):
+    def fill_miss_data(self, data):
         pass
 
-    def normalize_data(self):
+    def normalize_data(self, data):
         pass
 
     def split_train_test(self, features:pd.DataFrame, target:pd.DataFrame) -> dict:

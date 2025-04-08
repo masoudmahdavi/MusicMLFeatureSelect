@@ -1,3 +1,4 @@
+from ml_models.regression_models import LinearRegressionModel, FeatureSelectionContext
 
 class BestFeatures:
     def __init__(self, data:dict):
@@ -6,19 +7,20 @@ class BestFeatures:
 
     def find_best_features(self):
         pass
-    def fit(self):
-        self.model.fit(self.X, self.y)
-        return self.model.feature_importances_
     
     def each_feature_one_model(self):
+        modelـstrategy = LinearRegressionModel()
+        context = FeatureSelectionContext(modelـstrategy)
+        context.train()
         return self.model.feature_importances_
 
     def sklearn_feature_selection(self):
         from sklearn.feature_selection import SelectKBest, f_classif
         selector = SelectKBest(score_func=f_classif, k='all')
         selector.fit(self.X, self.y)
+        
         return selector.scores_
-    
+
     def select_method(self):
         method = input("Choose feature selection method (func1/func2): ").strip()
         if method == "func1":
