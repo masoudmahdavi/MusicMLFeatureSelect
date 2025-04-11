@@ -4,6 +4,10 @@ import logging
 from tabulate import tabulate
 from sklearn.model_selection import train_test_split
 from ml_models.feature_selection import BestFeatures
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OrdinalEncoder
+
+
 
 class Preprocess:
     def __init__(self, model:Model, logger:logging.Logger):
@@ -25,20 +29,25 @@ class Preprocess:
         This includes loading the data, handling missing values, normalizing data, and splitting into train/test sets.
         """
         self.logger.info("Starting data preprocessing...")
+        
+        self.logger.info("Removeing duplicate rows")
+        self.raw_data = self.raw_data.drop_duplicates()
+        
         self.logger.info("Splitting data into features and target variable.")
         features, target = self.split_featres_target()
-
+        
         self.logger.info("Splitting data into train and test sets.")
         preprocessed_data = self.split_train_test(features, target)
-
+        
+        
         self.logger.info("Handling missing values.")
         preprocessed_data = self.fill_miss_data(preprocessed_data)
-
+        
         self.logger.info("Normalizing data.")
         preprocessed_data = self.normalize_data(preprocessed_data)
 
         best_feature_selection_obj = BestFeatures(preprocessed_data)
-        exit()
+
         self.logger.info("Data preprocessing completed.")
         return preprocessed_data
 
@@ -51,10 +60,74 @@ class Preprocess:
         features = self.raw_data.drop(columns=['Class'])
         target = self.raw_data['Class']
         self.logger.info("Data split into features and target variable.")
+        target = self.one_hot_encode_data(target)
+        
         return features, target
     
+    def one_hot_encode_data(self, data:pd.Series):
+        data = data.to_frame(name='Class')
+        handled_text_df = self.text_encoder(data,
+                                method='one_hot_encoder', # 'one_hot_encoder' or 'ordinal_encoder'
+                          )
+        print(handled_text_df)
+        exit()
+        
+    def text_encoder(self, dataframe:pd.DataFrame, method='one_hot_encoder') -> pd.DataFrame:
+        """Handels texts in dataframe.
+
+        Args:
+            dataframe (pd.DataFrame): The dataframe with text columns
+            method (str, optional): Method of how to counter with texts. 
+                                    Defaults to 'one_hot_encoder'.
+
+        Returns:
+            pd.DataFrame: Dataframe withouadd_encoded_to_dft text format columns.
+        """
+        music_class = dataframe[["Class"]]
+
+        if method == 'one_hot_encoder':
+                encoded_df = self.one_hot_encoder(music_class)
+                encoded_df = self.add_encoded_to_df(encoded_df, dataframe)
+              
+        elif method == 'ordinal_encoder':
+                encoded_df = self.ordinal_encoder(music_class)
+                encoded_df = self.add_encoded_to_df(encoded_df, dataframe)
+        return encoded_df
+
+    def one_hot_encoder(self, music_class):
+        one_hot_encoder = OneHotEncoder()
+        encoded_cat = one_hot_encoder.fit_transform(music_class)
+        csr_encoded_cat = pd.DataFrame(encoded_cat, columns=music_class.columns,
+                                        index=music_class.index)
+        return csr_encoded_cat
+
+    def add_encoded_to_df(self, encoded_df:pd.DataFrame, dataframe:pd.DataFrame) -> pd.DataFrame:
+        dataframe['ocean_proximity'] = encoded_df
+        # dataframe['dense_matrix'] = dataframe['ocean_proximity'].apply(lambda x: x.toarray())
+        return dataframe
+    
+    def ordinal_encoder(self, music_class):
+        ordinal_encoder = OrdinalEncoder()
+        encoded_cat = ordinal_encoder.fit_transform(music_class)
+        csr_encoded_cat = pd.DataFrame(encoded_cat, columns=music_class.columns,
+                                        index=music_class.index)
+        return csr_encoded_cat
+    
     def fill_miss_data(self, data):
-        pass
+        """Fill missing data in the dataframe.
+
+        Args:
+            data (pd.DataFrame): Dataframe containing data
+
+        Returns:
+            pd.DataFrame: Dataframe with missing values filled
+        """
+        for column in data.columns:
+            if data[column].isnull().sum() > 0:
+                data[column].fillna(data[column].mean(), inplace=True)
+        self.logger.info("Missing values filled.")
+        return data
+
 
     def normalize_data(self, data):
         pass

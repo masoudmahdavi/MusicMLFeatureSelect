@@ -1,0 +1,12 @@
+fill_miss_data_method:
+  - "mean"
+  - "median"
+  - "interpolate"
+  - "drop"
+  - "dropna"
+  - "drop_duplicates"
+  - "dropna_duplicates"
+  - "dropna_duplicates_inplace"
+  - "drop_duplicates_inplace"
+  - "dropna_inplace"
+  - "drop_inplace"

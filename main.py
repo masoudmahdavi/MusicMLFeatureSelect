@@ -35,7 +35,7 @@ class MLPipeline:
             else:
                 self.logger.error(f"An error occurred: {e}")
         finally:
-            self.logger.info("ML pipeline completed.")
+            self.logger.info("The machine learning pipeline is complete.")
             pass
 
 if __name__ == "__main__":
