@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from ml_models.feature_selection import BestFeatures
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import OrdinalEncoder
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 
 
 
@@ -35,16 +37,18 @@ class Preprocess:
         
         self.logger.info("Splitting data into features and target variable.")
         features, target = self.split_featres_target()
-        
+       
         self.logger.info("Splitting data into train and test sets.")
         preprocessed_data = self.split_train_test(features, target)
-        
-        
+      
         self.logger.info("Handling missing values.")
         preprocessed_data = self.fill_miss_data(preprocessed_data)
         
+        print(preprocessed_data)
+        exit()
         self.logger.info("Normalizing data.")
-        preprocessed_data = self.normalize_data(preprocessed_data)
+        preprocessed_data = self.norm_num_data(preprocessed_data, norm_method='Standard') #'min_max' or 'Standard'
+        # combined_normiaized_text_df = combine_norm_and_text(normalized_df, handled_text_df)
 
         best_feature_selection_obj = BestFeatures(preprocessed_data)
 
@@ -64,13 +68,22 @@ class Preprocess:
         
         return features, target
     
-    def one_hot_encode_data(self, data:pd.Series):
+    def one_hot_encode_data(self, data:pd.Series) -> pd.DataFrame:
+        """This is used to convert categorical data into numerical data.
+
+        Args:
+            data (pd.Series): The data to be converted
+
+        Returns:
+            pd.DataFrame: Dataframe without text format columns.
+        """
         data = data.to_frame(name='Class')
         handled_text_df = self.text_encoder(data,
                                 method='one_hot_encoder', # 'one_hot_encoder' or 'ordinal_encoder'
                           )
-        print(handled_text_df)
-        exit()
+
+        return handled_text_df
+        
         
     def text_encoder(self, dataframe:pd.DataFrame, method='one_hot_encoder') -> pd.DataFrame:
         """Handels texts in dataframe.
@@ -94,6 +107,21 @@ class Preprocess:
                 encoded_df = self.add_encoded_to_df(encoded_df, dataframe)
         return encoded_df
 
+    def norm_num_data(self, num_dataframe:pd.DataFrame, norm_method:str):    
+        # data_labels = num_dataframe["median_house_value"].copy()
+        # num_dataframe = self._drop_income_cat(num_dataframe, "median_house_value")
+        if norm_method == "min_max":
+            min_max_scaler = MinMaxScaler(feature_range=(-1, 1))
+            norm_df = min_max_scaler.fit_transform(num_dataframe)
+    
+        elif norm_method == "Standard":
+            std_scaler = StandardScaler()
+            norm_df = std_scaler.fit_transform(num_dataframe)
+        
+        df = pd.DataFrame(norm_df, columns=num_dataframe.columns)
+        # df["median_house_value"] = data_labels
+        return df
+    
     def one_hot_encoder(self, music_class):
         one_hot_encoder = OneHotEncoder()
         encoded_cat = one_hot_encoder.fit_transform(music_class)
@@ -102,7 +130,7 @@ class Preprocess:
         return csr_encoded_cat
 
     def add_encoded_to_df(self, encoded_df:pd.DataFrame, dataframe:pd.DataFrame) -> pd.DataFrame:
-        dataframe['ocean_proximity'] = encoded_df
+        dataframe['Class'] = encoded_df
         # dataframe['dense_matrix'] = dataframe['ocean_proximity'].apply(lambda x: x.toarray())
         return dataframe
     
@@ -122,15 +150,14 @@ class Preprocess:
         Returns:
             pd.DataFrame: Dataframe with missing values filled
         """
-        for column in data.columns:
-            if data[column].isnull().sum() > 0:
-                data[column].fillna(data[column].mean(), inplace=True)
+        for key in data.keys():
+            for column in data[key].columns:
+                if data[key][column].isnull().sum() > 0:
+                    data[key][column].fillna(data[key][column].mean(), inplace=True)
+
         self.logger.info("Missing values filled.")
         return data
 
-
-    def normalize_data(self, data):
-        pass
 
     def split_train_test(self, features:pd.DataFrame, target:pd.DataFrame) -> dict:
         def log_tabulate_data_shapes(dict_data):
