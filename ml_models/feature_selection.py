@@ -5,7 +5,7 @@ class BestFeatures:
         self.model = self.select_method()
         self.data = data
 
-    def find_best_features(self):
+    def select_best_feature(self):
         pass
     
     def each_feature_one_model(self):

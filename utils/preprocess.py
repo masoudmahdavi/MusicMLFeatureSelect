@@ -44,13 +44,13 @@ class Preprocess:
         self.logger.info("Handling missing values.")
         preprocessed_data = self.fill_miss_data(preprocessed_data)
         
-        print(preprocessed_data)
-        exit()
         self.logger.info("Normalizing data.")
-        preprocessed_data = self.norm_num_data(preprocessed_data, norm_method='Standard') #'min_max' or 'Standard'
-        # combined_normiaized_text_df = combine_norm_and_text(normalized_df, handled_text_df)
+        preprocessed_data['X_train'] = self.norm_num_data(preprocessed_data['X_train'], norm_method='Standard') #'min_max' or 'Standard'
+        preprocessed_data['X_test'] = self.norm_num_data(preprocessed_data['X_train'], norm_method='Standard') #'min_max' or 'Standard'
 
-        best_feature_selection_obj = BestFeatures(preprocessed_data)
+        # combined_normiaized_text_df = combine_norm_and_text(normalized_df, handled_text_df)
+        # best_feature_selection_obj = BestFeatures(preprocessed_data)
+        
 
         self.logger.info("Data preprocessing completed.")
         return preprocessed_data
