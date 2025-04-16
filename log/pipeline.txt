@@ -5634,3 +5634,791 @@ TypeError: FeatureSelectionContext.train() missing 2 required positional argumen
 2025-04-16 22:10:07,097 - INFO - MLPipeline - Data preprocessing completed.
 2025-04-16 22:10:07,097 - INFO - MLPipeline - Data preprocessing completed.
 2025-04-16 22:10:07,097 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:23:00,734 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:23:00,735 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:23:00,742 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:23:00,743 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:23:00,743 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:23:00,743 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:23:00,743 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:23:00,745 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:23:00,746 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:23:00,758 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:23:00,760 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:23:00,763 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:23:00,763 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:23:00,763 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:23:00,766 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:23:00,767 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:23:02,662 - ERROR - MLPipeline - An error occurred: 'BestFeatures' object has no attribute 'data'
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 52, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 5, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 29, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 20, in sklearn_feature_selection
+    selector.fit(self.data['X_train'], self.data['y_train'])
+                 ^^^^^^^^^
+AttributeError: 'BestFeatures' object has no attribute 'data'
+2025-04-16 22:23:02,663 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:25:06,262 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:25:06,262 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:25:06,269 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:25:06,269 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:25:06,269 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:25:06,269 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:25:06,269 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:25:06,271 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:25:06,272 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:25:06,283 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:25:06,286 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:25:06,289 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:25:06,289 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:25:06,289 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:25:06,292 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:25:06,293 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:25:09,118 - ERROR - MLPipeline - An error occurred: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 52, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 6, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 29, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 20, in sklearn_feature_selection
+    selector.fit(self.data['X_train'], self.data['y_train'])
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/feature_selection/_univariate_selection.py", line 564, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1387, in check_X_y
+    y = _check_y(y, multi_output=multi_output, y_numeric=y_numeric, estimator=estimator)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1397, in _check_y
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 104, in _assert_all_finite
+    if _object_dtype_isnan(X).any():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/fixes.py", line 84, in _object_dtype_isnan
+    return X != X
+           ^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/scipy/sparse/_base.py", line 417, in __bool__
+    raise ValueError("The truth value of an array with more than one "
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+2025-04-16 22:25:09,122 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:25:35,433 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:25:35,433 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:25:35,440 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:25:35,440 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:25:35,440 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:25:35,440 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:25:35,440 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:25:35,443 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:25:35,444 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:25:35,455 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:25:35,457 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:25:35,460 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:25:35,460 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:25:35,461 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:25:35,463 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:25:35,464 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:25:41,018 - ERROR - MLPipeline - An error occurred: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 52, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 6, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 29, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 20, in sklearn_feature_selection
+    selector.fit(self.data['X_train'], self.data['y_train'])
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/feature_selection/_univariate_selection.py", line 564, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1387, in check_X_y
+    y = _check_y(y, multi_output=multi_output, y_numeric=y_numeric, estimator=estimator)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1397, in _check_y
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 104, in _assert_all_finite
+    if _object_dtype_isnan(X).any():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/fixes.py", line 84, in _object_dtype_isnan
+    return X != X
+           ^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/scipy/sparse/_base.py", line 417, in __bool__
+    raise ValueError("The truth value of an array with more than one "
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+2025-04-16 22:25:41,020 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:28:13,478 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:28:13,478 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:28:13,486 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:28:13,487 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:28:13,487 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:28:13,487 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:28:13,487 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:28:13,490 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:28:13,491 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:28:13,504 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:28:13,506 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:28:13,510 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:28:13,510 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:28:13,510 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:28:13,513 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:28:13,513 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:28:15,797 - ERROR - MLPipeline - An error occurred: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 52, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 6, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 29, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 20, in sklearn_feature_selection
+    selector.fit(self.data['X_train'], self.data['y_train'])
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/feature_selection/_univariate_selection.py", line 564, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1387, in check_X_y
+    y = _check_y(y, multi_output=multi_output, y_numeric=y_numeric, estimator=estimator)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1397, in _check_y
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 104, in _assert_all_finite
+    if _object_dtype_isnan(X).any():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/fixes.py", line 84, in _object_dtype_isnan
+    return X != X
+           ^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/scipy/sparse/_base.py", line 417, in __bool__
+    raise ValueError("The truth value of an array with more than one "
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+2025-04-16 22:28:15,801 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:28:24,057 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:28:24,057 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:28:24,064 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:28:24,064 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:28:24,064 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:28:24,065 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:28:24,065 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:28:24,067 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:28:24,068 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:28:24,079 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:28:24,082 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:28:24,085 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:28:24,086 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:28:24,086 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:28:24,089 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:28:24,089 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:28:25,435 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:28:30,894 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:28:30,894 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:28:30,901 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:28:30,901 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:28:30,901 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:28:30,901 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:28:30,901 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:28:30,904 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:28:30,905 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:28:30,918 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:28:30,920 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:28:30,923 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:28:30,923 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:28:30,923 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:28:30,926 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:28:30,926 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:28:33,203 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:28:40,565 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:28:40,565 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:28:40,575 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:28:40,575 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:28:40,575 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:28:40,576 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:28:40,576 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:28:40,578 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:28:40,580 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:28:40,592 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:28:40,595 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:28:40,597 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:28:40,598 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:28:40,598 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:28:40,601 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:28:40,601 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:28:42,985 - ERROR - MLPipeline - An error occurred: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+Traceback (most recent call last):
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/main.py", line 24, in run
+    preprocessed_data = self.preprocess.preprocess_raw_data()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/utils/preprocess.py", line 52, in preprocess_raw_data
+    best_feature_selection_obj = BestFeatures(preprocessed_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 6, in __init__
+    self.model = self.select_method()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 29, in select_method
+    return self.sklearn_feature_selection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/MusicMLFeatureSelect/ml_models/feature_selection.py", line 20, in sklearn_feature_selection
+    selector.fit(self.data['X_train'], self.data['y_train'])
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/feature_selection/_univariate_selection.py", line 564, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1387, in check_X_y
+    y = _check_y(y, multi_output=multi_output, y_numeric=y_numeric, estimator=estimator)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1397, in _check_y
+    y = check_array(
+        ^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/validation.py", line 104, in _assert_all_finite
+    if _object_dtype_isnan(X).any():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/sklearn/utils/fixes.py", line 84, in _object_dtype_isnan
+    return X != X
+           ^^^^^^
+  File "/home/masoud/python/select_best_feature/select_feature_env/lib/python3.12/site-packages/scipy/sparse/_base.py", line 417, in __bool__
+    raise ValueError("The truth value of an array with more than one "
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+2025-04-16 22:28:42,987 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:30:32,002 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:30:32,002 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:30:32,009 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:30:32,009 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:30:32,009 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:30:32,010 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:30:32,010 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:30:32,011 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:30:32,012 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:30:32,025 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:30:32,027 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:30:32,030 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:30:32,031 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:30:32,031 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:30:32,034 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:30:32,034 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:30:34,438 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:30:55,498 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:30:55,499 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:30:55,506 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:30:55,507 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:30:55,507 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:30:55,507 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:30:55,507 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:30:55,509 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:30:55,510 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:30:55,523 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:30:55,525 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:30:55,527 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:30:55,527 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:30:55,528 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:30:55,531 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:30:55,531 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:30:58,328 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:31:43,015 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:31:43,016 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:31:43,022 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:31:43,022 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:31:43,023 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:31:43,023 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:31:43,023 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:31:43,025 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:31:43,026 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:31:43,028 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:31:43,030 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:31:43,033 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:31:43,033 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:31:43,033 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:31:43,037 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:31:43,037 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:31:45,569 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:32:16,549 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:32:16,549 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:32:16,558 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:32:16,558 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:32:16,558 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:32:16,558 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:32:16,558 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:32:16,561 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:32:16,563 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:32:16,567 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:32:16,568 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:32:16,571 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:32:16,572 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:32:16,572 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:32:16,578 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:32:16,578 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:32:19,951 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:36:27,692 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:36:27,692 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:36:27,699 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:36:27,699 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:36:27,699 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:36:27,699 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:36:27,699 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:36:27,701 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:36:27,702 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:36:27,705 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:36:27,707 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:36:27,710 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:36:27,710 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:36:27,710 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:36:27,713 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:36:27,713 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:36:30,316 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:37:09,307 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:37:09,308 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:37:09,315 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:37:09,315 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:37:09,315 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:37:09,315 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:37:09,315 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:37:09,317 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:37:09,318 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:37:09,321 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:37:09,323 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:37:09,326 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:37:09,326 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:37:09,326 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:37:09,329 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:37:09,330 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:37:12,261 - INFO - MLPipeline - The machine learning pipeline is complete.
+2025-04-16 22:37:29,902 - INFO - MLPipeline - Data path: data/Turkish_Music_Mood_Recognition.csv
+2025-04-16 22:37:29,902 - INFO - MLPipeline - Preprocess class initialized.
+2025-04-16 22:37:29,909 - INFO - MLPipeline - 
++----+--------------------------------------------+-----------+---------+
+|    |                Column Name                 | Null Rows |  type   |
++----+--------------------------------------------+-----------+---------+
+| 0  |                   Class                    |     0     | object  |
+| 1  |             _Fluctuation_Mean              |     0     | float64 |
+| 2  |                _MFCC_Mean_2                |     0     | float64 |
+| 3  |                _MFCC_Mean_4                |     0     | float64 |
+| 4  |                _MFCC_Mean_7                |     0     | float64 |
+| 5  |              _Roughness_Mean               |     0     | float64 |
+| 6  |              _Roughness_Slope              |     0     | float64 |
+| 7  |          _Zero-crossingrate_Mean           |     0     | float64 |
+| 8  |              _AttackTime_Mean              |     0     | float64 |
+| 9  |             _Eventdensity_Mean             |     0     | float64 |
+| 10 |             _Pulseclarity_Mean             |     0     | float64 |
+| 11 |             _Chromagram_Mean_7             |     0     | float64 |
+| 12 |   _HarmonicChangeDetectionFunction_Mean    |     0     | float64 |
+| 13 | _HarmonicChangeDetectionFunction_PeriodAmp |     0     | float64 |
++----+--------------------------------------------+-----------+---------+
+2025-04-16 22:37:29,909 - INFO - MLPipeline - Starting the ML pipeline...
+2025-04-16 22:37:29,909 - INFO - MLPipeline - Preprocessing data...
+2025-04-16 22:37:29,909 - INFO - MLPipeline - Starting data preprocessing...
+2025-04-16 22:37:29,909 - INFO - MLPipeline - Removeing duplicate rows
+2025-04-16 22:37:29,912 - INFO - MLPipeline - Splitting data into features and target variable.
+2025-04-16 22:37:29,914 - INFO - MLPipeline - Data split into features and target variable.
+2025-04-16 22:37:29,917 - INFO - MLPipeline - Splitting data into train and test sets.
+2025-04-16 22:37:29,919 - INFO - MLPipeline - Data split into train and test sets.
+2025-04-16 22:37:29,922 - INFO - MLPipeline - 
++---------+-----------+
+|         |   shape   |
++---------+-----------+
+| X_train | (310, 13) |
+| X_test  | (78, 13)  |
+| y_train | (310, 1)  |
+| y_test  |  (78, 1)  |
++---------+-----------+
+2025-04-16 22:37:29,923 - INFO - MLPipeline - Data split completed.
+2025-04-16 22:37:29,923 - INFO - MLPipeline - Handling missing values.
+2025-04-16 22:37:29,928 - INFO - MLPipeline - Missing values filled.
+2025-04-16 22:37:29,929 - INFO - MLPipeline - Normalizing data.
+2025-04-16 22:37:32,360 - INFO - MLPipeline - The machine learning pipeline is complete.

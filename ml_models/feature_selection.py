@@ -1,9 +1,11 @@
 from ml_models.regression_models import LinearRegressionModel, FeatureSelectionContext
+import pandas as pd
+import numpy as np
 
 class BestFeatures:
     def __init__(self, data:dict):
-        self.model = self.select_method()
         self.data = data
+        self.model = self.select_method()
 
     def select_best_feature(self):
         pass
@@ -17,8 +19,9 @@ class BestFeatures:
     def sklearn_feature_selection(self):
         from sklearn.feature_selection import SelectKBest, f_classif
         selector = SelectKBest(score_func=f_classif, k='all')
-        selector.fit(self.X, self.y)
-        
+        selector.fit(self.data['X_train'], np.ravel(self.data['y_train']))
+        print(selector.scores_)
+        exit()
         return selector.scores_
 
     def select_method(self):
