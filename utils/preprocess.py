@@ -49,7 +49,7 @@ class Preprocess:
         preprocessed_data['X_test'] = self.norm_num_data(preprocessed_data['X_train'], norm_method='Standard') #'min_max' or 'Standard'
 
         # combined_normiaized_text_df = combine_norm_and_text(normalized_df, handled_text_df)
-        best_feature_selection_obj = BestFeatures(preprocessed_data)
+        best_feature_selection_obj = BestFeatures(preprocessed_data, self.logger)
         
 
         self.logger.info("Data preprocessing completed.")
