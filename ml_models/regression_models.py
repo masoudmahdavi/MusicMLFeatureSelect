@@ -8,8 +8,17 @@ class RegressionModelStrategy(ABC):
     Abstract base class for regression model strategies.
     """
 
+    def predictive_feature(self, features):
+        """
+        Predictive feature selection for regression models.
+        """
+        column_names = features.columns
+        predictive_feature = {}
+        for column in column_names:
+            predictive_feature[column] = ''
+
     @abstractmethod
-    def train(self, X_train, y_train):
+    def fit(self, X_train, y_train):
         """
         Train the regression model on the training data.
         """
@@ -35,9 +44,10 @@ class LinearRegressionModel(RegressionModelStrategy):
     """
 
     def __init__(self):
+        
         self.model = LinearRegression()
 
-    def train(self, X_train, y_train):
+    def fit(self, X_train, y_train):
         self.model.fit(X_train, y_train)
 
     def predict(self, X_test):
@@ -51,8 +61,11 @@ class FeatureSelectionContext:
     def __init__(self, strategy: RegressionModelStrategy):
         self.strategy = strategy
 
-    def train(self, X_train, y_train):
-        return self.strategy.train(X_train, y_train)
+    def predictive_feature(self, features):
+        return self.strategy.predictive_feature(features)
+
+    def fit(self, X_train, y_train):
+        return self.strategy.fit(X_train, y_train)
     
     def predict(self, X_test):
         return self.strategy.predict(X_test)
